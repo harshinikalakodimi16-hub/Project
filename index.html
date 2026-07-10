@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGenie - Google Gemini Powered Learning Assistant</title>
 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎓 EduGenie</h1>
+        <p>Your Google Gemini Powered Learning Assistant</p>
+    </header>
+
+    <main>
+
+        <section class="intro">
+            <h2>Welcome to EduGenie</h2>
+            <p>
+                EduGenie is an AI-powered learning assistant that helps students
+                understand concepts, answer questions, and learn efficiently
+                using Google Gemini AI.
+            </p>
+        </section>
+
+        <section class="chat-box">
+
+            <h2>Ask Your Question</h2>
+
+            <textarea
+                id="userQuestion"
+                placeholder="Type your question here..."
+                rows="6">
+            </textarea>
+
+            <br>
+
+            <button onclick="askQuestion()">
+                Ask Gemini
+            </button>
+
+        </section>
+
+        <section class="response">
+
+            <h2>AI Response</h2>
+
+            <div id="answer">
+                Your answer will appear here...
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 EduGenie | APSCHE Internship Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
