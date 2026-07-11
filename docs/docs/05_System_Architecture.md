@@ -2,31 +2,23 @@
 
 ## Overview
 
-EduGenie follows a simple client-server architecture where users interact with a web interface, and educational queries are processed using the Google Gemini API.
+The EduGenie system follows a client-server architecture. Users interact with a web interface that sends educational questions to the Google Gemini API. The AI processes the request and returns an intelligent response, which is displayed on the website.
 
-## Architecture Components
+## Components
 
-### User
+* User
+* Frontend (HTML, CSS, JavaScript)
+* Google Gemini API
+* AI Response
+* GitHub Pages
 
-The student enters a question through the web interface.
+## Workflow
 
-### Frontend
-
-The frontend is developed using HTML, CSS, and JavaScript. It collects the user's question and sends it to the Gemini API.
-
-### Google Gemini API
-
-The Gemini model processes the user's question and generates an AI-powered educational response.
-
-### Response Display
-
-The generated response is displayed on the website for the user.
-
-### Deployment
-
-The application is hosted using GitHub Pages, making it accessible through any web browser.
+1. User enters a question.
+2. The frontend sends the request to the Gemini API.
+3. Gemini generates an educational response.
+4. The response is displayed to the user.
 
 ## Architecture Diagram
 
 ![System Architecture](../assets/images/system_architecture.png)
-
