@@ -34,22 +34,16 @@ async function askQuestion() {
             }
         );
 
-        if (!response.ok) {
-            answer.innerHTML = `
-                <h3>⚠️ Service Temporarily Unavailable</h3>
-                <p>
-                    The AI service is currently unavailable due to an API
-                    authentication configuration issue.
-                </p>
-                <p>
-                    The frontend, project architecture, and deployment are working correctly.
-                </p>
-            `;
-            return;
-        }
+       const data = await response.json();
 
-        const data = await response.json();
-        answer.innerHTML = data.candidates[0].content.parts[0].text;
+if (!response.ok) {
+    console.log(data);
+    answer.innerHTML =
+        "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+    return;
+}
+
+answer.innerHTML = data.candidates[0].content.parts[0].text;
 
     } catch (error) {
         answer.innerHTML = `
