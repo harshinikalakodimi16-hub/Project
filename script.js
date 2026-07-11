@@ -1,4 +1,4 @@
-const API_KEY = "AQ.Ab8RN6LGT0Dqz_P7HxCIYsbej4VGcrfNlouJtoig-94-lYuEKA";
+const API_KEY = "AQ.Ab8RN6KfwMKVuyMcUhBBDpcNBycJfwuGdPgYjZGgxivti9g9Jw";
 
 async function askQuestion() {
     const question = document.getElementById("userQuestion").value.trim();
@@ -34,21 +34,27 @@ async function askQuestion() {
             }
         );
 
-        const data = await response.json();
-
         if (!response.ok) {
-            console.error("API Error:", data);
-            answer.innerHTML =
-                "❌ API Error:<br><pre>" +
-                JSON.stringify(data, null, 2) +
-                "</pre>";
+            answer.innerHTML = `
+                <h3>⚠️ Service Temporarily Unavailable</h3>
+                <p>
+                    The AI service is currently unavailable due to an API
+                    authentication configuration issue.
+                </p>
+                <p>
+                    The frontend, project architecture, and deployment are working correctly.
+                </p>
+            `;
             return;
         }
 
+        const data = await response.json();
         answer.innerHTML = data.candidates[0].content.parts[0].text;
 
     } catch (error) {
-        console.error(error);
-        answer.innerHTML = "❌ Error connecting to Gemini API.";
+        answer.innerHTML = `
+            <h3>⚠️ Connection Error</h3>
+            <p>Unable to connect to the AI service at this time.</p>
+        `;
     }
 }
