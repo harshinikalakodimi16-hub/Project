@@ -1,4 +1,4 @@
-const API_KEY = "xxxx";
+const API_KEY = "AQ.Ab8RN6IKHS5BVNGckzhk-uhKAnY10xJ07P5njrPIW7399EcCwg";
 
 async function askQuestion() {
     const question = document.getElementById("userQuestion").value.trim();
@@ -13,7 +13,8 @@ async function askQuestion() {
 
     try {
         const response = await fetch(
-            https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+    {
             {
                 method: "POST",
                 headers: {
