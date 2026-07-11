@@ -1,4 +1,4 @@
-const API_KEY = "AQ.Ab8RN6IKHS5BVNGckzhk-uhKAnY10xJ07P5njrPIW7399EcCwg";
+const API_KEY = "xxxx";
 
 async function askQuestion() {
     const question = document.getElementById("userQuestion").value.trim();
