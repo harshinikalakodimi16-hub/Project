@@ -1,32 +1,32 @@
 # 🎓 EduGenie – Google Gemini Powered Learning Assistant
 
-## 📖 Project Overview
+## 📌 Project Overview
 
-EduGenie is an AI-powered learning assistant developed using Google's Gemini AI. The application helps students learn concepts quickly by providing intelligent, interactive, and personalized responses to academic questions.
-
-The project aims to improve the learning experience by allowing students to ask questions in natural language and receive accurate explanations instantly.
+EduGenie is an AI-powered learning assistant developed as part of the APSCHE Internship Program. The application enables students to ask academic questions and receive AI-generated responses using Google's Gemini model. It is designed with a simple, responsive web interface to make learning interactive and accessible.
 
 ---
 
-# 🎯 Problem Statement
+## 🎯 Objectives
 
-Students often spend a significant amount of time searching for learning resources across multiple websites. Traditional learning platforms provide static content and cannot answer personalized questions effectively.
-
-EduGenie solves this problem by using Google Gemini AI to provide real-time, intelligent, and context-aware educational assistance.
-
----
-
-# 🎯 Objectives
-
-* Develop an AI-powered educational assistant.
-* Provide personalized learning support.
-* Generate accurate responses using Gemini AI.
-* Create a simple and responsive interface.
+* Build an AI-powered educational assistant.
+* Integrate Google Gemini AI with a web application.
+* Provide an interactive learning experience.
 * Deploy the application using GitHub Pages.
 
 ---
 
-# 🛠 Technologies Used
+## ✨ Features
+
+* AI-powered question answering
+* Simple and responsive user interface
+* Real-time interaction with Gemini AI
+* Clean web-based design
+* Easy to use for students
+* Deployed through GitHub Pages
+
+---
+
+## 🛠 Technologies Used
 
 * HTML5
 * CSS3
@@ -37,44 +37,99 @@ EduGenie solves this problem by using Google Gemini AI to provide real-time, int
 
 ---
 
-# ✨ Core Features
-
-* AI-powered chatbot
-* Instant educational responses
-* Responsive user interface
-* Easy-to-use design
-* Fast response generation
-* Browser-based application
-
----
-
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```text
-EduGenie/
+Project/
+│── README.md
 │── index.html
 │── style.css
 │── script.js
-│── README.md
-│── assets/
-│── docs/
+│
+├── assets/
+│   ├── images/
+│   │   ├── er_diagram.png
+│   │   ├── project_flow.png
+│   │   └── system_architecture.png
+│   └── screenshots/
+│       ├── home_page.png
+│       ├── chat_page.png
+│       └── ai_response.png
+│
+└── docs/
+    ├── 01_Prerequisites.md
+    ├── 02_ER_Diagram.md
+    ├── 03_Project_Flow.md
+    ├── 04_Model_Selection.md
+    ├── 05_System_Architecture.md
+    ├── 06_Core_Functionalities.md
+    ├── 07_Frontend_Development.md
+    ├── 08_Deployment.md
+    └── 09_Conclusion.md
 ```
 
 ---
 
-# 🚀 Deployment
+## 🏗 Project Workflow
+
+1. User opens the EduGenie website.
+2. User enters an academic question.
+3. The frontend sends the request to the Google Gemini API.
+4. Gemini processes the request.
+5. The AI-generated response is displayed to the user.
+
+---
+
+## 📊 Documentation
+
+Project documentation is available in the `docs` folder and includes:
+
+* Prerequisites
+* ER Diagram
+* Project Flow
+* Model Selection
+* System Architecture
+* Core Functionalities
+* Frontend Development
+* Deployment
+* Conclusion
+
+---
+
+## 🖼 Screenshots
+
+Place the following screenshots inside the `assets/screenshots` folder:
+
+* Home Page
+* Chat Interface
+* AI Response
+
+---
+
+## 🚀 Deployment
 
 The project is deployed using GitHub Pages.
 
 ---
 
-# 👩‍💻 Developer
+## 🔮 Future Enhancements
 
-Team Project – APSCHE Internship
+* User authentication
+* Learning history
+* Personalized recommendations
+* Multi-language support
+* Voice-based interaction
 
 ---
 
-# 📄 License
+## 👩‍💻 Developer
 
-This project is developed for educational purposes as part of the APSCHE Internship Program.
+**Harshini Kalakodimi**
 
+APSCHE Internship Project – EduGenie: Google Gemini Powered Learning Assistant
+
+---
+
+## 📄 License
+
+This project was developed for educational purposes as part of the APSCHE Internship Program.
