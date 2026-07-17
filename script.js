@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyNEW_API_KEY";
+const API_KEY = "AQ.Ab8RN6KWhIaplf_7ljOR9kYk5bvHetxfxRtAPtIljmob1YJZvg";
 
 async function askQuestion() {
     const question = document.getElementById("userQuestion").value.trim();
