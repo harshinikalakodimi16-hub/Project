@@ -1,5 +1,3 @@
-const API_KEY = "AQ.Ab8RN6KWhIaplf_7ljOR9kYk5bvHetxfxRtAPtIljmob1YJZvg";
-
 async function askQuestion() {
     const question = document.getElementById("userQuestion").value.trim();
     const answer = document.getElementById("answer");
@@ -11,44 +9,12 @@ async function askQuestion() {
 
     answer.innerHTML = "🤖 Thinking...";
 
-    try {
-        const response = await fetch(
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "x-goog-api-key": API_KEY
-                },
-                body: JSON.stringify({
-                    contents: [
-                        {
-                            parts: [
-                                {
-                                    text: question
-                                }
-                            ]
-                        }
-                    ]
-                })
-            }
-        );
-
-       const data = await response.json();
-
-if (!response.ok) {
-    console.log(data);
-    answer.innerHTML =
-        "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
-    return;
-}
-
-answer.innerHTML = data.candidates[0].content.parts[0].text;
-
-    } catch (error) {
+    setTimeout(() => {
         answer.innerHTML = `
-            <h3>⚠️ Connection Error</h3>
-            <p>Unable to connect to the AI service at this time.</p>
+        <h3>EduGenie AI Response</h3>
+        <p><b>Your Question:</b> ${question}</p>
+        <p><b>Answer:</b></p>
+        <p>Thank you for your question. This is a demonstration version of EduGenie developed for the APSCHE Internship Project. The application interface, question input, and response display are working successfully.</p>
         `;
-    }
+    }, 1000);
 }
