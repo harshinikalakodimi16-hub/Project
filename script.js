@@ -1,20 +1,52 @@
+const API_KEY = "AQ.Ab8RN6KWhIaplf_7ljOR9kYk5bvHetxfxRtAPtIljmob1YJZvg";
+
 async function askQuestion() {
     const question = document.getElementById("userQuestion").value.trim();
     const answer = document.getElementById("answer");
 
-    if (question === "") {
+    if (!question) {
         answer.innerHTML = "Please enter a question.";
         return;
     }
 
     answer.innerHTML = "🤖 Thinking...";
 
-    setTimeout(() => {
-        answer.innerHTML = `
-        <h3>EduGenie AI Response</h3>
-        <p><b>Your Question:</b> ${question}</p>
-        <p><b>Answer:</b></p>
-        <p>This is a demonstration of the EduGenie AI Learning Assistant developed as part of the APSCHE Internship Project. The application successfully accepts user questions and displays AI responses through the user interface.</p>
-        `;
-    }, 1000);
+    try {
+        const response = await fetch(
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "x-goog-api-key": API_KEY
+                },
+                body: JSON.stringify({
+                    contents: [
+                        {
+                            parts: [
+                                {
+                                    text: question
+                                }
+                            ]
+                        }
+                    ]
+                })
+            }
+        );
+
+        const data = await response.json();
+
+        console.log(data);
+
+        if (!response.ok) {
+            answer.innerHTML = "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+            return;
+        }
+
+        answer.innerHTML = data.candidates[0].content.parts[0].text;
+
+    } catch (err) {
+        console.error(err);
+        answer.innerHTML = "Connection Error";
+    }
 }
