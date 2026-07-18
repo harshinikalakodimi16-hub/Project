@@ -36,17 +36,25 @@ async function askQuestion() {
 
         const data = await response.json();
 
-        console.log(data);
+        // Show full response in browser console
+        console.log("Gemini Response:", data);
 
         if (!response.ok) {
-            answer.innerHTML = "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+            answer.innerHTML =
+                "<h3>❌ API Error</h3><pre>" +
+                JSON.stringify(data, null, 2) +
+                "</pre>";
             return;
         }
 
         answer.innerHTML = data.candidates[0].content.parts[0].text;
 
     } catch (err) {
-        console.error(err);
-        answer.innerHTML = "Connection Error";
+        console.error("Connection Error:", err);
+
+        answer.innerHTML = `
+            <h3>⚠️ Connection Error</h3>
+            <p>${err.message}</p>
+        `;
     }
 }
